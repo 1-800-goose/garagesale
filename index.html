@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet"> -->
+    <meta charset="utf-8">
+    <title>robin's garage sale</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="img/x-icon" href="img/cat.ico">
+    <script src="indexx.js"></script>
+  </head>
+  <body>
+    <nav id="nav">
+      <button id="open">filter</button>
+      <button class="home-btn">new</button>
+      <button id="free-nav">free</button>
+      <button id="sale-nav">sale</button>
+      <button id="cart-btn">cart</button>
+    </nav>
+    <aside id="aside">
+      <ul>
+        <li>
+          <p id="close">&times;</p>
+        </li>
+        <li>
+          <p class="home-btn">home</p>
+        </li>
+        <li id="new" class="home-btn">
+          <p>new</p>
+        </li>
+        <li id="free">
+          <p>free</p>
+        </li>
+        <li id="sale">
+          <p>sale</p>
+        </li>
+      </ul>
+    </aside>
+    <main id="main">
+      <header class="home-btn">
+        <!-- <img src="img/logo.png" alt="bear bakerie logo"> -->
+        <h1>robin's garage sale</h1>
+      </header>
+
+      <section id="home">
+        <section id="items" class="flex">
+          <!-- item cards go here -->
+        </section>
+      </section>
+
+      <section id="filter" class="hidden">
+        <section id="filter-items">
+          <!-- filter items -->
+        </section>
+      </section>
+
+      <section id="cart" class="flex hidden">
+        <article id="cart-card" class="double">
+          <h2>Cart</h2>
+          <p id="empty">Your Cart is Empty</p>
+          <section id="cart-list"></section>
+          <p>Thank You For Shopping In Robin's Garage!</p>
+          <input id="checkout" type="submit" value="Proceed to Checkout">
+        </article>
+        <article id="thanks" class="hidden">
+          <h2>Thank You for Shopping With Us! <br> Come Again Soon!</h2>
+        </article>
+      </section>
+      <section id="item">
+        <!-- display selected item here -->
+      </section>
+    </main>
+    <section id="error" class="hidden">
+      <h2>An unexpected error has occurred! Please check back Later!</h2>
+    </section>
+  </body>
+</html>

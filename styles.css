@@ -1,0 +1,355 @@
+/*
+  Name: Ryan Le, Robin Luo
+  Date: December 10th, 2021
+  Section: CSE 154 AE and AB
+
+  This is the styles.css page for the Bear Bakerie. The general theme was cute but cozy and
+  are pastel, pink, and brown to achieve this atmosphere. It provides formatting of element blocks
+  such as sections, main, buttons, headers, and certain views through IDs. It also includes classes
+  such as hidden for JavaScript functionally.
+*/
+
+body {
+  background-size: 25px 25px;
+  background-image:
+    linear-gradient(to right, #ffd8d8 2px, transparent 2px),
+    linear-gradient(to bottom, #ffd8d8 2px, white 2px);
+  animation-name: background-animation;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/** Citation for CSS animations: https://developer.mozilla.org/en-US/docs/Web/CSS/animation */
+
+@keyframes background-animation {
+  from {
+    background-position: 0px 0px;
+  }
+
+  to {
+    background-position: 250px 250px;
+  }
+}
+
+header {
+  background-image: url("img/background.jpg");
+  width: 80%;
+  margin: auto;
+  margin-top: 80px;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 80%;
+  letter-spacing: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Shrikhand', cursive;
+  font-style: italic;
+  color: rgb(255, 250, 240);
+  text-align: center;
+  font-size: 400%;
+  text-shadow: -2.5px 0 #a84754, 0 2.5px #a84754, 2.5px 0 #a84754, 0 -2.5px #a84754;
+}
+
+header img {
+  height: 60px;
+}
+
+header button {
+  height: auto;
+}
+
+header h1:hover {
+  color: rgb(224, 186, 194);
+}
+
+h2 {
+  font-size: 30px;
+  font-style: italic;
+  color: #a84754;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgb(255, 250, 240);
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 10px;
+  opacity: 80%;
+  padding: 8px;
+}
+
+main {
+  transition: 0.5s;
+}
+
+/** aside bar with animation citation: https://www.w3schools.com/howto/howto_js_sidenav.asp */
+
+aside {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: white;
+  padding-top: 65px;
+  z-index: 1; /* To be on top of other elements */
+  overflow: hidden; /* Prevents text from spilling out of the bar */
+  transition: 0.5s;
+}
+
+aside p {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: grey;
+  transition: 0.3s;
+}
+
+aside li {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+aside img {
+  height: 80px;
+  transition: 0.3s;
+  float: inline-start;
+}
+
+aside ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+aside li:hover {
+  cursor: pointer;
+}
+
+aside li:hover p {
+  opacity: 60%;
+}
+
+aside li:hover img {
+  filter: grayscale(100%);
+}
+
+button, input[type="submit"], input[type="reset"], input[type="button"] {
+  background-color: tan;
+  color: rgb(50, 35, 17);
+  font-family: 'Times New Roman', 'Times', serif;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  letter-spacing: 2px;
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+  cursor: pointer;
+  filter: brightness(70%);
+}
+
+form input {
+  margin-bottom: 15px;
+}
+
+.selected {
+  border-style: solid;
+  color: black;
+  border-radius: 15%;
+}
+
+.selected-item {
+  background-color: white;
+  opacity: 80%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 40px;
+  justify-content: center;
+}
+
+.open-aside {
+  width: 250px;
+}
+
+.open-main {
+  margin-left: 250px;
+}
+
+.home-btn {
+  text-decoration: wavy;
+  font-style: italic;
+}
+
+.card, form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  padding: 10px;
+}
+
+.card, #cart-card, #user-page, #error, #login, #thanks, #compact article, #sign-up, #failure {
+  background-color: white;
+  opacity: 85%;
+  border-radius: 30px;
+  margin: 20px;
+}
+
+.card img {
+  height: 200px;
+}
+
+.card p, #cart-card, #menu {
+  color: grey;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.selected-item img {
+  width: 350px;
+}
+
+.heart {
+  width: 10px;
+  height: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+#close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#items {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#menu {
+  column-count: 3;
+  column-gap: 60px;
+}
+
+#compact p:hover {
+  cursor: pointer;
+}
+
+#account, #cart {
+  justify-content: center;
+  align-items: center;
+}
+
+#account {
+  color: grey;
+  font-style: italic;
+  font-size: 20px;
+}
+
+#account form {
+  flex-direction: column;
+  padding: 80px;
+}
+
+#login-message {
+  font-size: 20pt;
+  margin-top: 0;
+}
+
+#purchase-history div, .selected-item img, .selected-item, .double {
+  border: double #a84754;
+  border-radius: 10px;
+}
+
+#colOne {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  align-items: center;
+  color: #a84754;
+}
+
+#colOne p {
+  margin: 10px;
+}
+
+#colOne p img {
+  width: 50px;
+  border: none;
+}
+
+#colTwo {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  font-size: 20px;
+  width: 50%;
+}
+
+#cart-card, #user-page, #thanks, #failure, #error {
+  width: 60%;
+  padding: 40px;
+}
+
+#thanks, #failure, #error {
+  text-align: center;
+  margin: auto;
+}
+
+#thanks {
+  margin-top: 50px;
+}
+
+#purchase-history div {
+  font-size: 15px;
+  padding: 20px;
+  margin: 10px;
+}
+
+#error {
+  margin-top: 100px;
+}
